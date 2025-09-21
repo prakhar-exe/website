@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Web App</title>
-  </head>
-  <body>
-    <h1>Welcome to My Web App!</h1>
-    <p>This is hosted for free using GitHub Pages.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apple-like Tabs Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="home" aria-selected="true" role="tab">Home</button>
+      <button class="tab" data-tab="about" aria-selected="false" role="tab">About</button>
+      <button class="tab" data-tab="contact" aria-selected="false" role="tab">Contact</button>
+    </nav>
+    <section class="tab-content" id="home" role="tabpanel">
+      <h1>Welcome</h1>
+      <p>This is a professional, Apple-inspired website. Enjoy the smooth tabs and elegant design!</p>
+    </section>
+    <section class="tab-content hidden" id="about" role="tabpanel">
+      <h1>About</h1>
+      <p>Clean typography, beautiful tabs, and minimal style—all built with HTML, CSS, and JS.</p>
+    </section>
+    <section class="tab-content hidden" id="contact" role="tabpanel">
+      <h1>Contact</h1>
+      <p>Get in touch! This demo shows how you can make a modern site with GitHub Pages.</p>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>

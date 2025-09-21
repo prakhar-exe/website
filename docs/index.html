@@ -3,28 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <title>Apple-like Tabs Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+  <header>
     <nav class="tabs" role="tablist">
       <button class="tab active" data-tab="home" aria-selected="true" role="tab">Home</button>
       <button class="tab" data-tab="about" aria-selected="false" role="tab">About</button>
       <button class="tab" data-tab="contact" aria-selected="false" role="tab">Contact</button>
+      <button id="modeToggle" class="mode-toggle" title="Toggle light/dark mode">🌙</button>
     </nav>
+  </header>
+  <main>
     <section class="tab-content" id="home" role="tabpanel">
       <h1>Welcome</h1>
-      <p>This is a professional, Apple-inspired website. Enjoy the smooth tabs and elegant design!</p>
+      <p>
+        This is a professional, Apple-inspired website. Enjoy the smooth tabs and elegant design! Scroll down to see the reading progress slider update as you read.
+      </p>
+      <div style="height: 600px;"></div>
+      <p>End of Home tab content.</p>
+      <div class="slider-container">
+        <label for="homeSlider">Reading Progress:</label>
+        <input type="range" min="0" max="100" value="0" id="homeSlider" disabled>
+      </div>
     </section>
     <section class="tab-content hidden" id="about" role="tabpanel">
       <h1>About</h1>
-      <p>Clean typography, beautiful tabs, and minimal style—all built with HTML, CSS, and JS.</p>
+      <p>
+        Clean typography, beautiful tabs, and minimal style—all built with HTML, CSS, and JS. Scroll to see your progress in this tab!
+      </p>
+      <div style="height: 600px;"></div>
+      <p>End of About tab content.</p>
+      <div class="slider-container">
+        <label for="aboutSlider">Reading Progress:</label>
+        <input type="range" min="0" max="100" value="0" id="aboutSlider" disabled>
+      </div>
     </section>
     <section class="tab-content hidden" id="contact" role="tabpanel">
       <h1>Contact</h1>
-      <p>Get in touch! This demo shows how you can make a modern site with GitHub Pages.</p>
+      <p>
+        Get in touch! This demo shows how you can make a modern site with GitHub Pages. Scroll to update your reading progress!
+      </p>
+      <div style="height: 600px;"></div>
+      <p>End of Contact tab content.</p>
+      <div class="slider-container">
+        <label for="contactSlider">Reading Progress:</label>
+        <input type="range" min="0" max="100" value="0" id="contactSlider" disabled>
+      </div>
     </section>
-  </div>
+  </main>
+  <footer>
+    <span class="prakhar">Prakhar</span>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
